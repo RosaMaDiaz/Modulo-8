@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de estructura IF en JavaScript</title>
+</head>
+<body>
+    <h2>Evaluacion de edad</h2>
+
+    <script>
+        var edad = prompt("¿Cuántos años tienes? ");
+        edad = Number(edad);
+
+        if (edad >= 65){
+            document.write("Eres un adulto mayor.");
+        } else if (edad >= 18){
+            document.write("Eres un adulto.");
+        } else {
+            document.write("Eres menor de edad.");
+        }
+    </script>
+    
+</body>
+</html>

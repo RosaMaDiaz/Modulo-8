@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad Parte 4: Uso de Funciones</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            padding: 20px;
+        }
+        .contenedor {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            font-size: 1.4rem;
+        }
+        u {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .saludo {
+            background-color: #e8f4f8;
+            padding: 10px;
+            border-left: 5px solid #3498db;
+            margin-bottom: 20px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <script>
+            // 1. FUNCIÓN: Mostrar el texto procesado 
+            function mostrarTextoProcesado(nombreUsuario, listaNumeros) {
+                let nombreMayuscula = nombreUsuario.toUpperCase();
+                let nombreMinuscula = nombreUsuario.toLowerCase();
+                let longitudNombre = nombreUsuario.length;
+
+                document.write("<div class='saludo'>");
+                document.write("<p>¡Hola, " + nombreMayuscula + "! Bienvenido al sistema.</p>");
+                document.write("<p>Tu nombre en minúsculas es: <b>" + nombreMinuscula + "</b></p>");
+                document.write("<p>Tu nombre tiene <b>" + longitudNombre + "</b> caracteres de largo.</p>");
+                document.write("</div>");
+
+                // Mostrar el array usando .length
+                document.write("<h2>Números ingresados: <u>" + listaNumeros.join(", ") + "</u></h2>");
+                document.write("<p>Cantidad de números evaluados: <b>" + listaNumeros.length + "</b></p>");
+            }
+
+            // 2. FUNCIÓN: Calcular el promedio
+            function calcularPromedio(suma, cantidad) {
+                return suma / cantidad;
+            }
+
+            // 3. FUNCIÓN: Mostrar resultados matemáticos 
+            function mostrarResultadosMatematicos(suma, promedio, mayor, menor) {
+                document.write("<h2>Resultados de la Suma</h2>");
+                document.write("<p>Suma total: <u>" + suma + "</u></p>");
+
+                document.write("<h2>Resultados del Promedio y Redondeos</h2>");
+                document.write("<p>Promedio exacto: <u>" + promedio.toFixed(2) + "</u></p>");
+                document.write("<p>Redondeo normal (Math.round): <b>" + Math.round(promedio) + "</b></p>");
+                document.write("<p>Redondeo hacia arriba (Math.ceil): <b>" + Math.ceil(promedio) + "</b></p>");
+                document.write("<p>Redondeo hacia abajo (Math.floor): <b>" + Math.floor(promedio) + "</b></p>");
+
+                document.write("<h2>Valores Extremos</h2>");
+                document.write("<p>Número Mayor: <u>" + mayor + "</u></p>");
+                document.write("<p>Número Menor: <u>" + menor + "</u></p>");
+            }
+
+            // FUNCIÓN PRINCIPAL: Controla el flujo y aplica validaciones
+            function iniciarPrograma() {
+                // Solicitar texto para procesar
+                let usuario = prompt("Por favor, ingresa tu nombre:");
+                
+                // Validación básica para el nombre
+                if (!usuario) {
+                    usuario = "Estudiante Anónimo";
+                }
+
+                let numeros = [];
+                
+                // Estructura de repetición para llenar el array
+                for (let i = 0; i < 5; i++) {
+                    let entrada;
+                    let numeroValido = false;
+
+                    // Bucle de validación de datos numéricos correctos
+                    while (!numeroValido) {
+                        entrada = prompt("Ingrese el número " + (i + 1) + ": ");
+                        let numeroConvertido = parseFloat(entrada);
+
+                        // Comprobar que no esté vacío y que sea un número real (isNaN comprueba si no es un número)
+                        if (entrada !== "" && entrada !== null && !isNaN(numeroConvertido)) {
+                            numeros.push(numeroConvertido);
+                            numeroValido = true; // Rompe el while y pasa al siguiente número
+                        } else {
+                            alert("¡Error! Por favor, ingrese un número válido numérico.");
+                        }
+                    }
+                }
+
+                // 1. Llamada a la primera función
+                mostrarTextoProcesado(usuario, numeros);
+
+                // Calcular la suma u
+                let totalSuma = 0;
+                for (let num of numeros) {
+                    totalSuma += num;
+                }
+
+                // 2. Llamada a la segunda función para obtener el promedio
+                let resultadoPromedio = calcularPromedio(totalSuma, numeros.length);
+
+                // Obtener mayor y menor de forma compatible
+                let numeroMayor = Math.max.apply(null, numeros);
+                let numeroMenor = Math.min.apply(null, numeros);
+
+                // 3. Llamada a la tercera función para mostrar la matemática
+                mostrarResultadosMatematicos(totalSuma, resultadoPromedio, numeroMayor, numeroMenor);
+            }
+
+            // Ejecución automática del programa
+            iniciarPrograma();
+        </script>
+    </div>
+
+    <footer>
+        <p style="text-align: center; margin-top: 20px; color: #777;">© 2026 - Actividad Parte 4: Uso de Funciones - Rosa Díaz</p>
+
+    </footer>
+
+</body>
+</html>

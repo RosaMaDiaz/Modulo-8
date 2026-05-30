@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedimiento #6 - Clasificación del Promedio</title>
+    <script>
+        //captura y conversion de notas
+        let nota1 = parseFloat(prompt("Ingrese la primera nota: "));
+        let nota2 = parseFloat(prompt("Ingrese la segunda nota: "));
+        let nota3 = parseFloat(prompt("Ingrese la tercera nota: "));
+
+        //Calculo del promedio
+        let promedio = (nota1 + nota2 + nota3) / 3;
+        
+
+        //Mostrar resultados
+        document.write("<h2>Evaluación del Alumno</h2>");
+        document.write("Nota 1: " + nota1 + "<br>");
+        document.write("Nota 2: " + nota2 + "<br>");
+        document.write("Nota 3: " + nota3 + "<br>");
+        document.write("Promedio: " + promedio.toFixed(2) + "<br><br>");
+
+        //Evaluación de Promoción
+        if (promedio >= 7) {
+            document.write("<strong>¡Promocionado! </strong>");            
+        } else if (promedio >= 4){
+            document.write("<strong>Regular </strong>");            
+        } else {
+            document.write("<strong>Reprobado. </strong>");            
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Integradora</title>
+    
+</head>
+<body>
+    <h1 align="center" style="color: red;">Actividad Integradora</h1>
+    <hr><br>
+
+    //Desarrollar la actividad integradora final propuesta en la guía, aplicando:
+        •	Variables.
+        •	Operadores.
+        •	Estructuras selectivas.
+        •	Ciclos.
+        •	Funciones.
+        •	Eventos.
+
+    <script>
+        // Variables
+        let nombre = prompt("¿Cuál es tu nombre?");
+        let edad = parseInt(prompt("¿Cuántos años tienes?"));
+
+        // Función para calcular el año de nacimiento
+        function calcularAnioNacimiento(edad) {
+            const anioActual = new Date().getFullYear();
+            return anioActual - edad;
+        }
+
+        // Estructura selectiva
+        if (edad >= 18) {
+            alert(`¡Hola ${nombre}! Eres mayor de edad.`);
+        } else {
+            alert(`¡Hola ${nombre}! Eres menor de edad.`);
+        }
+
+        // Ciclo para mostrar los primeros 5 años de vida
+        console.log(`Los primeros 5 años de vida de ${nombre} fueron:`);
+        for (let i = 0; i < 5; i++) {
+            console.log(`Año ${i + 1}: ${calcularAnioNacimiento(edad) + i}`);
+        }
+    </script>
+
+<footer>
+    <hr>
+    <p style="text-align: center; margin-top: 20px; color: #777;">© 2026 - Actividad Integradora - Rosa Díaz</p>
+</footer>
+    
+</body>
+</html>

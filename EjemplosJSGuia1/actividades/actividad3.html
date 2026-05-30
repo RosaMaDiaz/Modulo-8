@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Parte 3: Funciones Matemáticas</title>
+</head>
+<body>
+    <h1 align="center" style="color: red;">Actividad Parte 3: Funciones Matemáticas</h1>
+    <hr><br>
+    <script>
+        //Aplicar funciones matemáticas al promedio:
+        let numeros = [10, 20, 30, 40, 50];
+
+        //redondeo normal
+        let promedio=0;
+            for (let numero of numeros) {
+                promedio += numero;
+            }
+            let promedioRedondeado = Math.round(promedio);
+
+        //redondeo hacia arriba
+        let promedioRedondeadoArriba = Math.ceil(promedio);
+
+        //redondeo hacia abajo
+        let promedioRedondeadoAbajo = Math.floor(promedio);
+
+        //Mostrar los resultados
+        document.write("<h2>Promedio: <u>" + promedio + "</u></h2>");
+        document.write("<h2>Promedio Redondeado: <u>" + promedioRedondeado + "</u></h2>");
+        document.write("<h2>Promedio Redondeado hacia Arriba: <u>" + promedioRedondeadoArriba + "</u></h2>");
+        document.write("<h2>Promedio Redondeado hacia Abajo: <u>" + promedioRedondeadoAbajo + "</u></h2>");
+    </script>
+
+    <footer>
+        <p style="text-align: center; margin-top: 20px; color: #777;">© 2026 - Actividad Parte 3: Funciones Matemáticas - Rosa Díaz</p>
+
+    </footer>
+    
+</body>
+</html>

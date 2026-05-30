@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio de Calificaciones</title>
+</head>
+<body>
+    <script>
+        let calificaciones = [];
+        let entrada;
+        let suma = 0;
+        document.write("<h2>Cálculo del promedio de calificaciones </h2>");
+
+        //Bucle WHILE para capturar las calificaciones
+        while (true) {
+            entrada = prompt("Ingrese una calificación (o escriba 'fin' para terminar: )");
+
+            if (entrada === null || entrada.toLocaleLowerCase() === "fin") {
+                break;
+            }
+            let nota = parseFloat(entrada);
+            if (!isNaN(nota)) {
+                calificaciones.push(nota);
+            } else {
+                alert (" ⚠️ Entrada no válida. Intente de nuevo.")
+            }
+        } 
+
+        //Si se ingresaron calificacione
+        if (calificaciones.length > 0){
+            //Bucle FOR par sumar las calificaciones
+            for (let i = 0; i < calificaciones.length; i++){
+                suma += calificaciones[i];
+            }
+            let promedio = suma / calificaciones.length;
+            document.write("<p>Calificaciones Integradas: " + calificaciones.join(", ") + "</p>");
+            document.write("<p><strong>Promedio General: </strong>" + promedio.toFixed(2) + "<p>");
+        } else {
+            document.write("<p>No se ingresaron calificaciones. </p>");
+        }
+        document.write("<p>Programa finalizado. Hasta luego!</p>");
+
+    </script>
+    
+</body>
+</html>

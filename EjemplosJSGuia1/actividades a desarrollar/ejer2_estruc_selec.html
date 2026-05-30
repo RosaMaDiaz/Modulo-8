@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 — Estructuras Selectivas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: red;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        u {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .contenedor {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+         .saludo {
+            background-color: #e8f4f8;
+        }
+             
+    </style>
+</head>
+<body>
+    <h1 align="center" style="color: red;">Ejercicio 2: Estructuras Selectivas</h1>
+    <hr><br>
+
+    <div class="contenedor">
+        <script>
+            // Solicitar al edad del usuario y clasificar si es niño, adolescente y  adulto.
+            let usuario = prompt("Ingrese su nombre: ");
+            let edad = parseInt(prompt("Ingrese su edad: "));
+            if (edad >= 0 && edad <= 12) {
+                document.write("<h2>¡Hola, " + usuario + "! Eres un niño.</h2>");
+            } else if (edad > 12 && edad <= 18) {
+                document.write("<h2>¡Hola, " + usuario + "! Eres un adolescente.</h2>");
+            } else if (edad > 18) {
+                document.write("<h2>¡Hola, " + usuario + "! Eres un adulto.</h2>");
+            } else {
+                document.write("<h2>Edad no válida. Por favor ingrese una edad correcta.</h2>");
+            }
+
+        </script>
+    </div>
+
+        <footer>
+            <p style="text-align: center; margin-top: 20px; color: #777;">© 2026 - Ejercicio 2: Estructuras Selectivas - Rosa Díaz</p>
+        </footer>
+    
+</body>
+</html>

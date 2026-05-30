@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Parte 2: Trabajo con Arrays</title>
+</head>
+<body>
+    <h1 align="center" style="color: red;">Actividad Parte 2: Trabajo con Arrays</h1>
+    <hr><br>
+    <script>
+        //Solicitar al usuario 5 numeros y almacenarlos en un array.
+        let numeros = [];
+        for (let i = 0; i < 5; i++){
+            let numero = parseFloat(prompt("Ingrese el numero " + (i+1) + ": "));
+            numeros.push(numero);
+        }
+
+        //Mostrar los numeros ingresados.
+        document.write("<h2>Numéros ingresados: <u>" + numeros + "</u></h2>");
+
+        //Calcular la suma de los numeros.
+        
+        let suma = 0;
+        for (let numero of numeros) {
+            suma += numero;
+        }
+        document.write("<h2>Suma de los numeros: <u>" + suma + "</u></h2>");
+
+        //Calcular el promedio de los numeros.
+        let promedio = suma / numeros.length;
+        document.write("<h2>Promedio de los numeros: <u>" + promedio + "</u></h2>");
+
+        //Mostrar el numero mayor y menor.
+        let numeroMayor = Math.max.apply(null, numeros);
+        let numeroMenor = Math.min.apply(null, numeros);
+        document.write("<h2>Numero Mayor: <u>" + numeroMayor + "</u></h2>");
+        document.write("<h2>Numero Menor: <u>" + numeroMenor + "</u></h2>");
+</script>
+
+ <footer>
+        <p style="text-align: center; margin-top: 20px; color: #777;">© 2026 - Actividad Parte 2: Trabajo con Arrays - Rosa Díaz</p>
+
+    </footer>
+    
+</body>
+</html>

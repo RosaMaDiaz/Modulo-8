@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Parte 1 - Procesamiento de texto</title>
+</head>
+<body>
+    <h1 align="center" style="color: red;">Actividad Parte 1 - Procesamiento de texto</h1>
+    <hr><br>
+    <script>
+        //solicitar nombre completo
+        let nombreCompleto = prompt("Ingrese su nombre completo: ");
+    
+        //mostrar el nombre completo
+        document.write("<h2>Nombre Completo: <u>" + nombreCompleto + "</u></h2><hr><br>"); 
+
+        // mostrar el texto en mayusculas.
+        let nombreEnMayusculas = nombreCompleto.toUpperCase();
+        document.write("<h2>Nombre en Mayusculas: <u>" + nombreEnMayusculas + "</u></h2>");
+
+        //Mostrar el texto en minusculas.
+        let nombreEnMinusculas = nombreCompleto.toLowerCase();
+        document.write("<h2>Nombre en Minusculas: <u>" + nombreEnMinusculas + "</u></h2>");
+
+        //Mostrar la cantidad de caracteres ingresados.
+        let cantidadCaracteres = nombreCompleto.length;
+        document.write("<h2>Cantidad de Caracteres: <u>" + cantidadCaracteres + "</u></h2>");
+
+        //Mostrar la primera letra del texto ingresado.
+        let primeraLetra = nombreCompleto.charAt(0);
+        document.write("<h2>Primera Letra: <u>" + primeraLetra + "</u></h2>");
+
+
+    </script>
+
+    <footer>
+        <p style="text-align: center; margin-top: 20px; color: #777;">© 2026 - Actividad Parte 1: Procesamiento de texto - Rosa Díaz</p>
+
+    </footer>
+
+</body>
+</html>

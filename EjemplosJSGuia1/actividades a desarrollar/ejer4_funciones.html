@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 — Funciones</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: red;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        u {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .contenedor {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+            border-left: 5px solid #3498db;
+        }
+         .saludo {
+            background-color: #e8f4f8;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center" style="color: red;">Ejercicio 4: Funciones</h1>
+    <hr><br>
+
+   <div class="contenedor">
+        <script>
+            // Solicitar al usuario su nombre y 4 calificaciones, luego calcular el promedio y mostrar si aprueba o reprueba.
+            let usuario = prompt("Ingrese su nombre: ");
+            let calificaciones = [];
+            for (let i = 0; i < 4; i++) {
+                let calificacion = parseFloat(prompt("Ingrese la calificación " + (i + 1) + ": "));
+                calificaciones.push(calificacion);
+            }
+        
+            let promedio = calificaciones.reduce((sum, calif) => sum + calif, 0) / calificaciones.length;
+            if (promedio >= 70) {
+                document.write("<h2>¡Hola, " + usuario + "! Tu promedio es " + promedio.toFixed(2) + ". ¡Aprobaste!</h2>");
+            } else {
+                document.write("<h2>¡Hola, " + usuario + "! Tu promedio es " + promedio.toFixed(2) + ". ¡Reprobaste!</h2>");
+            }
+        </script>
+   </div>
+
+    <footer>
+        <p style="text-align: center; margin-top: 20px; color: #777;">© 2026 - Ejercicio 4: Funciones - Rosa Díaz</p>
+
+    </footer>    
+
+</body>
+</html>

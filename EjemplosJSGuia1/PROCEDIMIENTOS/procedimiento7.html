@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedimiento #7 - Mayor de 3 Números</title>
+    <script>
+        let num1 = parseFloat(prompt("Ingrese el primer numero: "));
+        let num2 = parseFloat(prompt("Ingrese el segunda numero: "));
+        let num3 = parseFloat(prompt("Ingrese el tercera numero: "));
+
+        //Determinar el mayor
+        let mayor;
+
+        if (num1 > num2 && num1 > num3) {
+            mayor = num1;
+        } else if (num2 > num3) {
+            mayor = num2;
+        } else {
+            mayor = num3;
+        }
+
+        //Mostrar resultados
+        document.write("<h2>Comparación de Números</h2>");
+        document.write("Número 1: " + num1 + "<br>");
+        document.write("Número 2: " + num2 + "<br>");
+        document.write("Número 3: " + num3 + "<br>");
+        document.write("<strong>El numero mayor es: " + mayor + "</strong>");
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

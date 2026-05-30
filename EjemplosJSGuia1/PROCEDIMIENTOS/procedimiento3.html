@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>procedimiento #3 - Calculos y conversacion de tipos</title>
+    <script>
+        //CAptura de datos desde teclado
+        let articulo = prompt("Ingrese un Articulo: ");
+        let precio = prompt("Ingrese el precio del articulo (entero): ");
+        let cantidad = prompt("Ingrese la cantidad comprada ");
+
+        //Conversacion de tipos
+        precio = parseInt(precio);
+        cantidad = parseInt(cantidad);
+
+        //Cálculo
+        let total = precio * cantidad;
+
+        // Mostrar resultado
+        document.write("<h2>REsumen de Compra</h2>");
+        document.write("Articulo: " + articulo + "<br>");
+        document.write("Precio del articulo " + precio + "<br>")
+        document.write("Cantidad: " + cantidad + "<br>");
+        document.write("Total a Pagar " + total + "<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

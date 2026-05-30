@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Confirm</title>
+</head>
+<body>
+    <h2>Encuesta de Participación</h2>
+
+    <script>
+        //Solicitar confirmacion al usuario
+        let respuesta = confirm("¿Desea participar en el curso de JavaScript?")
+
+        //Evaluar la respuesta
+        if (respuesta == true){
+            document.write("<h3>Gracias por registrarse en el curso.</h3>");
+            document.write("Próximamente recibirá más información.");
+        }
+        else {
+            document.write("<h3>Ha cancelado la participación.</h3>");
+            document.write("Puede registrarse más adelante.");
+        }
+    </script>
+    
+</body>
+</html>

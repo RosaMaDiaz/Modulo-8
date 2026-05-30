@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedimiento #5 - Promedio de Notas</title>
+    <script>
+        let nota1 = parseInt(prompt("Ingrese la primera nota: "));
+        let nota2 = parseInt(prompt("Ingrese la segunda nota: "));
+        let nota3 = parseInt(prompt("Ingrese la tercera nota: "));
+
+        //Calculo del promedio
+        let suma = nota1 + nota2 + nota3;
+        let promedio = suma / 3;
+
+        //Mostrar resultados
+        document.write("<h2>Evaluación del Alumno</h2>");
+        document.write("Nota 1: " + nota1 + "<br>");
+        document.write("Nota 2: " + nota2 + "<br>");
+        document.write("Nota 3: " + nota3 + "<br>");
+        document.write("Promedio: " + promedio.toFixed(2) + "<br><br>");
+
+        //Evaluación de Promoción
+        if (promedio >= 7) {
+            document.write("<strong>¡Promocionado! </strong>");            
+        } else {
+            document.write("<strong>No ha alcanzado la promoción. </strong>");            
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

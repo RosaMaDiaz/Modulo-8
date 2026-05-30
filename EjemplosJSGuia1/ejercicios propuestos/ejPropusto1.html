@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas y Abarrotes</title>
+</head>
+<body>
+    <script>
+        // Programa: Descuento or tipo de cliente
+        // Simula reglas de descuento en una tienda tecnológica
+        let nombre = (prompt("Ingrese el nombre del cliente: "));
+        let tipo = (prompt("Ingrese el tipo de cliente (Regular, Premium, Nuevo): "));
+        let monto = parseFloat(prompt("Ingrese el monto de la compra: "));
+        let descuento = 0;
+
+        // Estructura selectiva múltiple
+        if (tipo ==="Regular") {
+            if (monto >= 10000) {
+                descuento = 0.05;
+            }
+        } else if (tipo === "Premium") {
+            if (monto < 10000) {
+                descuento = 0.10;
+            } else if (monto <= 20000) {
+                descuento = 0.15;
+            } else {
+                descuento = 0.20;
+            }
+        } else if (tipo === "Nuevo") {
+            descuento = 0;
+        } else {
+            alert ("Tipo de cliente no válido")
+        }
+
+        //Mostrar resultado
+        let totalPagar = monto - (monto * descuento);
+        document.write("<h3>Resumen de la compra</h3>");
+        document.write("Cliente: " + nombre + "<br>");
+        document.write("Tipo: " + tipo + "<br>");
+        document.write("Monto original: RD$" + monto.toFixed(2) + "<br>");
+        document.write("Descuento aplicado: RD$" + (descuento *-100) + "%<br>");
+        document.write("Monto final a Pagar: RD$" + totalPagar.toFixed(2));
+    </script>
+    
+</body>
+</html>

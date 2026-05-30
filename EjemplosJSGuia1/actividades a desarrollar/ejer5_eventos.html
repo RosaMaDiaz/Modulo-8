@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 — Eventos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: red;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        u {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 align="center" style="color: red;">Ejercicio 5: Eventos</h1>
+    <hr><br>
+
+    
+        <script>
+            // Crear un botón que al hacer clic muestre un mensaje de saludo.
+            let botonSaludo = document.createElement("button");
+            botonSaludo.textContent = "Haz clic para saludar";
+            document.body.appendChild(botonSaludo);
+
+            botonSaludo.addEventListener("click", function() {
+                alert("¡Hola! Gracias por hacer clic en el botón.");
+            });
+
+            //•	Campo de texto usando onchange u oninput.
+            let campoTexto = document.createElement("input");
+            campoTexto.type = "text";
+            campoTexto.placeholder = "Escribe algo aquí...";
+            document.body.appendChild(campoTexto);
+            campoTexto.addEventListener("input", function() {
+                console.log("Texto ingresado: " + campoTexto.value);
+            });
+        
+        </script>
+
+    <footer>
+        <hr>
+        <p style="text-align: center; margin-top: 20px; color: #777;">© 2026 - Ejercicio 5: Eventos - Rosa Díaz</p>
+    </footer>
+
+    
+</body>
+</html>
