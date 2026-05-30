@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #1abc9c;
+            color: #fff;
+            text-align: center
+        }
+
+        .fila {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0
+        }
+        
+        input {
+            padding: 6px;
+            border: none;
+            border-radius: 5px
+        }
+
+        button {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background: #16a085;
+            color: #fff;
+            cursor: pointer
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h2>Funciones con Parámetros</h2>
+    
+    <div class="fila">
+        <label>Nombre</label>
+        <input id="nombre">
+        <button onclick="mostrarNombre(nombre.value)">Mostrar</button>
+    </div>
+
+    <div class="fila">
+        <label>Edad</label>
+        <input type="number" id="edad">
+        <button onclick="mostrarEdad(edad.value)">Mostrar</button>
+    </div>
+
+    <div class="fila">
+        <label>Ciudad</label>
+        <input id="ciudad">
+        <button onclick="mostrarCiudad(ciudad.value)">Mostrar</button>
+    </div>
+
+    <div class="fila">
+        <button onclick="mostrarTodo(nombre.value,edad.value,ciudad.value)">
+            Mostrar Todo
+        </button>
+    </div>
+
+    <div id="resultado"></div>
+    <script>
+        function mostrarNombre(n) { resultado.innerHTML = "Nombre: " + n; }
+        function mostrarEdad(e) { resultado.innerHTML = "Edad: " + e; }
+        function mostrarCiudad(c) { resultado.innerHTML = "Ciudad: " + c; }
+        
+        function obtenerEstado(e) {
+            e = parseInt(e);
+            if (e <= 12) return "Niño";
+            else if (e <= 17) return "Joven";
+            else if (e <= 59) return "Adulto";
+            else return "Adulto Mayor";
+        }
+
+        function mostrarTodo(n, e, c) {
+            resultado.innerHTML = "Nombre: " + n + "<br>Edad: " + e +
+            "<br>Ciudad: " + c + "<br>Estado: " + obtenerEstado(e);
+        }
+</script>
+
+</body>
+</html>
