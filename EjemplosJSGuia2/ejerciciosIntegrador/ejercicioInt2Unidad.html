@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Evaluación de Notas</title>
+<style>
+    body {
+        font-family: 'Segoe UI';
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        color: #fff;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: auto;
+        padding: 20px;
+        background: #ffffff15;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+    }
+
+    .fila {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    input {
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        width: 100px;
+
+    }
+    
+    button {
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        background: #fff;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #resultado {
+        margin-top: 20px;
+        text-align: left;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🎓 Evaluación de Estudiantes</h1>
+            <div class="fila">
+                <input id="nombre" placeholder="Nombre">
+                <input id="n1" type="number" placeholder="Nota 1">
+                <input id="n2" type="number" placeholder="Nota 2">
+                <input id="n3" type="number" placeholder="Nota 3">
+
+                <button onclick="agregar()">Agregar</button>
+            </div>
+
+            <button onclick="mostrar()">📊 Mostrar Resultados</button>
+
+            <div id="resultado"></div>
+
+    </div>
+
+    <script>
+        // ARRAYS GLOBALES
+        let nombres = [], promedios = [], estados = [];
+
+        // FUNCIÓN FLECHA → calcular promedio
+        const calcularPromedio = (a, b, c) => Math.round((a + b + c) / 3);
+
+        // FUNCIÓN DECLARATIVA → determinar estado
+        function determinarEstado(prom) {
+
+            return prom >= 70 ? "Aprobado" : "Reprobado";
+
+        }
+
+        // FUNCIÓN COMO OBJETO → agregar estudiante
+
+        let agregar = function () {
+
+            let nom = nombre.value;
+
+            let nota1 = parseFloat(n1.value);
+
+            let nota2 = parseFloat(n2.value);
+
+            let nota3 = parseFloat(n3.value);
+
+            if (nom == "" || [nota1, nota2, nota3].some(n => isNaN(n) || n < 0 || n >
+
+            100)) {
+
+                alert("Datos inválidos");
+
+
+                return;
+
+            }
+
+            let prom = calcularPromedio(nota1, nota2, nota3);
+
+            let est = determinarEstado(prom);
+
+            nombres.push(nom);
+
+            promedios.push(prom);
+
+            estados.push(est);
+
+            nombre.value = ""; n1.value = ""; n2.value = ""; n3.value = "";
+
+        }
+
+        // FUNCIÓN ANÓNIMA → mostrar resultados
+
+        let mostrar = function () {
+
+            let salida = "";
+
+            let aprobados = 0, reprobados = 0;
+
+            let mayor = promedios[0], menor = promedios[0];
+
+            for (let i = 0; i < nombres.length; i++) {
+
+                salida += `${nombres[i]} → Prom: ${promedios[i]} → ${estados[i]}<br>`;
+
+                if (estados[i] == "Aprobado") aprobados++; else reprobados++;
+
+                if (promedios[i] > mayor) mayor = promedios[i];
+
+                if (promedios[i] < menor) menor = promedios[i];
+
+            }
+
+            // función flecha adicional (promedio general)
+
+            const promedioGeneral = arr => Math.round(arr.reduce((a, b) => a + b, 0) /
+
+            arr.length);
+
+            salida += `<hr>
+
+            Promedio General: ${promedioGeneral(promedios)}<br>
+
+            Aprobados: ${aprobados}<br>
+
+            Reprobados: ${reprobados}<br>
+
+            Mayor Promedio: ${nombres[promedios.indexOf(mayor)]} (${mayor})<br>
+
+            Menor Promedio: ${nombres[promedios.indexOf(menor)]} (${menor})
+
+            `;
+
+            resultado.innerHTML = salida;
+
+        }
+</script>
+
+</body>
+</html>
