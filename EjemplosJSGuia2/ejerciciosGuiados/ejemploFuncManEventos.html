@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Funciones como Eventos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+            text-align: center;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            color: #fff;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            background: #fff;
+            color: #333;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+
+        button:hover {
+            background: #eee;
+        }
+
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+</style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🖱️ Eventos en JavaScript</h1>
+
+        <input type="text" id="nombre" placeholder="Escribe tu nombre">
+        <br>
+            <button onclick="mostrarBienvenida()">Bienvenida</button>
+            <button onclick="saludar()">Mostrar Nombre</button>
+            <button onclick="cambiarColor()">Cambiar Color</button>
+
+            <div id="resultado"></div>
+    </div>
+
+    <script>
+        // 🔹 Función manejadora de evento (mensaje)
+        function mostrarBienvenida() {
+            document.getElementById("resultado").innerHTML =
+            "👋 ¡Bienvenido al uso de eventos en JavaScript!";
+        }
+
+        // 🔹 Función manejadora (captura datos)
+        function saludar() {
+            let nombre = document.getElementById("nombre").value;
+            if (nombre == "") {
+                document.getElementById("resultado").innerHTML =
+                "⚠️ Por favor, escriba su nombre";
+                return;
+            }
+            document.getElementById("resultado").innerHTML =
+            "✅ Hola " + nombre;
+        }
+
+        // 🔹 Función manejadora (cambio visual)
+        function cambiarColor() {
+            let colores = ["#1abc9c", "#e74c3c", "#9b59b6", "#f39c12", "#2ecc71"];
+            let color = colores[Math.floor(Math.random() * colores.length)];
+                document.body.style.background = color;
+        }
+</script>
+
+</body>
+</html>
