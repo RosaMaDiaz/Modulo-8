@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de IMC</title>
+    <meta charset="UTF-8">
+<title>Sistema de IMC</title>
+<style>
+    body {
+        font-family: 'Segoe UI';
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        color: #fff;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background: #ffffff15;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+    }
+
+    .fila {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    input {
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    button {
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        background: #00ffcc;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #resultado {
+        margin-top: 20px;
+        text-align: left;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>⚖️ Calculadora de IMC</h1>
+        
+        <div class="fila">
+            <input id="nombre" placeholder="Nombre">
+            <input id="peso" type="number" placeholder="Peso (kg)">
+            <input id="estatura" type="number" placeholder="Estatura (m)">
+
+            <button onclick="agregarPersona()">Agregar</button>
+        </div>
+
+        <button onclick="mostrarResultados()">📊 Mostrar Resultados</button>
+        <div id="resultado"></div>
+    </div>
+
+<script>
+    // ARRAYS (globales)
+    let nombres = [], pesos = [], estaturas = [];
+    
+    // FUNCIÓN FLECHA (calcular IMC)
+    const calcularIMC = (peso, estatura) => (peso / (estatura *
+    estatura)).toFixed(2);
+
+    // FUNCIÓN DECLARATIVA (estado)
+    function determinarEstado(imc) {
+        if (imc < 18.5) return "Bajo peso";
+        else if (imc < 25) return "Normal";
+        else if (imc < 30) return "Sobrepeso";
+        else return "Obesidad";
+    }
+
+        // FUNCIÓN COMO OBJETO
+        let agregarPersona = function () {
+        
+            let n = nombre.value;
+            let p = parseFloat(peso.value);
+            let e = parseFloat(estatura.value);
+
+            if (n == "" || isNaN(p) || isNaN(e) || e <= 0) {
+                alert("Datos inválidos");
+                return;
+            }
+
+            nombres.push(n);
+            pesos.push(p);
+            estaturas.push(e);
+            nombre.value = ""; peso.value = ""; estatura.value = "";
+        }
+
+    // FUNCIÓN ANÓNIMA (resumen)
+    let mostrarResultados = function () {
+
+        let salida = "";
+        let conteo = { bajo: 0, normal: 0, sobrepeso: 0, obesidad: 0 };
+        for (let i = 0; i < nombres.length; i++) {
+
+            let imc = calcularIMC(pesos[i], estaturas[i]);
+            let estado = determinarEstado(imc);
+            salida += `${nombres[i]} → IMC: ${imc} → ${estado}<br>`;
+
+            if (estado == "Bajo peso") conteo.bajo++;
+            else if (estado == "Normal") conteo.normal++;
+            else if (estado == "Sobrepeso") conteo.sobrepeso++;
+            else conteo.obesidad++;
+         }
+    
+        salida += `<hr>
+
+    Bajo peso: ${conteo.bajo}<br>
+    Normal: ${conteo.normal}<br>
+    Sobrepeso: ${conteo.sobrepeso}<br>
+    Obesidad: ${conteo.obesidad}
+    `;
+            resultado.innerHTML = salida;
+        }
+
+</script>
+
+</body>
+</html>
