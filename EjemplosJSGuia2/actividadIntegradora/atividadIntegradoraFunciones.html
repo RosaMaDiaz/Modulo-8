@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Calificaciones</title>
+    <style>
+        /* --- ESTILOS GENERALES --- */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #34495e;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+        
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            background: linear-gradient(135deg, #5c6bc0, #3949ab);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            margin: 20px 0; 
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background-color: #00e5ff;
+            color: #00242c;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-bottom: 25px;
+        }
+        button:hover {
+            background-color: #00b8d4;
+        }
+        
+        /* --- SECCIÓN DE RESULTADOS --- */
+        #resultado {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+        .institucion {
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .estudiante-linea {
+            margin: 5px 0;
+        }
+        .resumen-metodologia {
+            border-top: 1px solid rgba(255,255,255,0.3);
+            margin-top: 15px;
+            padding-top: 10px;
+        }
+
+        /* --- ESTILOS DEL FOOTER --- */
+        footer {
+            width: 100%;
+            background-color: #1a237e; 
+            color: #b0bec5;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 14px;
+            margin-top: auto; 
+            border-top: 3px solid #00e5ff; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>📊 Sistema de Calificaciones</h2>
+        <button onclick="iniciarPrograma()">Iniciar Programa</button>
+        
+        <div id="resultado">Presione el botón para registrar los datos de la institución y estudiantes.</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Desarrollo Web - Sistema de Gestión de Calificaciones Académicas</p>
+    </footer>
+
+    <script>
+        // --- VARIABLES GLOBALES ---
+        let nombreInstitucion = "";
+        let cantidadEstudiantes = 0;
+        
+        let nombresEstudiantes = [];
+        let promediosEstudiantes = [];
+        let estadosEstudiantes = [];
+
+        // --- PARTE 3: FUNCIONES ---
+        function mostrarBienvenida() {
+            alert("¡Bienvenido al Sistema de Calificaciones Automatizado!");
+        }
+
+        function calcularPromedio(n1, n2, n3) {
+            let prom = (n1 + n2 + n3) / 3;
+            return Math.round(prom);
+        }
+
+        function determinarEstado(prom) {
+            if (prom >= 70) {
+                return "Aprobado";
+            } else {
+                return "Reprobado";
+            }
+        }
+
+        function calcularPromedioGeneral() {
+            if (promediosEstudiantes.length === 0) return 0;
+            
+            let suma = 0;
+            for (let i = 0; i < promediosEstudiantes.length; i++) {
+                suma += promediosEstudiantes[i];
+            }
+            return Math.round(suma / promediosEstudiantes.length);
+        }
+
+        function mostrarResumen() {
+            let aprobados = 0;
+            let reprobados = 0;
+            
+            let mayorProm = promediosEstudiantes[0];
+            let estudianteMayor = nombresEstudiantes[0];
+            
+            let menorProm = promediosEstudiantes[0];
+            let estudianteMenor = nombresEstudiantes[0];
+
+            let htmlContenido = "<div class='institucion'>" + nombreInstitucion + "</div>";
+
+            for (let i = 0; i < promediosEstudiantes.length; i++) {
+                htmlContenido += "<div class='estudiante-linea'>" + nombresEstudiantes[i] + " - Prom: " + promediosEstudiantes[i] + " - " + estadosEstudiantes[i] + "</div>";
+                
+                if (estadosEstudiantes[i] === "Aprobado") {
+                    aprobados++;
+                } else {
+                    reprobados++;
+                }
+
+                if (promediosEstudiantes[i] > mayorProm) {
+                    mayorProm = promediosEstudiantes[i];
+                    estudianteMayor = nombresEstudiantes[i];
+                }
+
+                if (promediosEstudiantes[i] < menorProm) {
+                    menorProm = promediosEstudiantes[i];
+                    estudianteMenor = nombresEstudiantes[i];
+                }
+            }
+
+            let promGeneral = calcularPromedioGeneral();
+
+            htmlContenido += "<div class='resumen-metodologia'>";
+            htmlContenido += "<strong>Promedio General:</strong> " + promGeneral + "<br>";
+            htmlContenido += "<strong>Aprobados:</strong> " + aprobados + "<br>";
+            htmlContenido += "<strong>Reprobados:</strong> " + reprobados + "<br>";
+            htmlContenido += "<strong>Mayor Promedio:</strong> " + estudianteMayor + " (" + mayorProm + ")<br>";
+            htmlContenido += "<strong>Menor Promedio:</strong> " + estudianteMenor + " (" + menorProm + ")";
+            htmlContenido += "</div>";
+
+            document.getElementById("resultado").innerHTML = htmlContenido;
+        }
+
+        // --- PARTE 5: CONTROLADOR PRINCIPAL ---
+        function iniciarPrograma() {
+            nombresEstudiantes = [];
+            promediosEstudiantes = [];
+            estadosEstudiantes = [];
+
+            mostrarBienvenida();
+
+            nombreInstitucion = prompt("Ingrese el nombre de la institución:");
+            if (!nombreInstitucion) nombreInstitucion = "Institución No Especificada";
+
+            do {
+                cantidadEstudiantes = parseInt(prompt("¿Cuántos estudiantes desea registrar?"));
+                if (isNaN(cantidadEstudiantes) || cantidadEstudiantes <= 0) {
+                    alert("Por favor, introduzca un número válido y mayor que cero.");
+                }
+            } while (isNaN(cantidadEstudiantes) || cantidadEstudiantes <= 0);
+
+            for (let i = 0; i < cantidadEstudiantes; i++) {
+                let nombre = prompt("Nombre del estudiante " + (i + 1) + ":");
+                if (!nombre) nombre = "Estudiante " + (i + 1);
+
+                let notas = [];
+                for (let n = 1; n <= 3; n++) {
+                    let nota;
+                    do {
+                        nota = parseFloat(prompt("Ingrese la Calificación " + n + " para " + nombre + " (0 - 100):"));
+                        if (isNaN(nota) || nota < 0 || nota > 100) {
+                            alert("Nota inválida. Debe ser un número entre 0 y 100.");
+                        }
+                    } while (isNaN(nota) || nota < 0 || nota > 100);
+                    notas.push(nota);
+                }
+
+                let promedioIndividual = calcularPromedio(notas[0], notas[1], notas[2]);
+                let estadoIndividual = determinarEstado(promedioIndividual);
+
+                nombresEstudiantes.push(nombre);
+                promediosEstudiantes.push(promedioIndividual);
+                estadosEstudiantes.push(estadoIndividual);
+            }
+
+            mostrarResumen();
+        }
+    </script>
+</body>
+</html>
