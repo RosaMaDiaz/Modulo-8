@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Práctica de Eventos</title>
+<style>
+    body {
+        font-family: Arial;
+        text-align: center;
+        background: #3498db;
+        color: white;
+    }
+
+    button,
+        input {
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button {
+        background: #2ecc71;
+        color: white;
+        cursor: pointer;
+    }
+
+    #resultado {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<!-- onload -->
+<body onload="paginaCargada()">
+    <h2>🧪 Práctica de Eventos</h2>
+    
+    <!-- oninput -->
+    <input type="text" id="texto" placeholder="Escribe algo" oninput="escribiendo()">
+    <br>
+
+    <!-- onchange -->
+    <input type="text" placeholder="Cambiar valor" onchange="cambio()">
+    <br>
+
+    <!-- onclick -->
+    <button onclick="clic()">Click</button>
+    <!-- onmouseover / onmouseout -->
+        <button onmouseover="entrar()" onmouseout="salir()">Pasa el mouse</button>
+
+        <div id="resultado"></div>
+    <script>
+        // onload
+        function paginaCargada() {
+            resultado.innerHTML = "✅ Página cargada correctamente";
+        }
+
+        // onclick
+        function clic() {
+            resultado.innerHTML = "🖱️ Hiciste clic en el botón";
+        }
+
+        // oninput
+        function escribiendo() {
+            let valor = document.getElementById("texto").value;
+            resultado.innerHTML = "⌨️ Escribiendo: " + valor;
+        }
+
+        // onchange
+        function cambio() {
+            resultado.innerHTML = "🔄 Valor cambiado";
+        }
+
+        // onmouseover
+        function entrar() {
+            document.body.style.background = "#e67e22";
+        }
+
+        // onmouseout
+        function salir() {
+            document.body.style.background = "#3498db";
+        }
+    </script>
+    
+</body>
+</html>

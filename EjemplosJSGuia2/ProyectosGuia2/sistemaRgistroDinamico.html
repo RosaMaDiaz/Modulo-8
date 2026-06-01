@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de Registro de Estudiantes</title>
+
+<link rel="stylesheet" href="css/estilosSRD.css">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <header>
+            <h1>📋 Sistema de Registro de Estudiantes</h1>
+            <p>Proyecto Integrador DOM</p>
+        </header>
+
+        <section class="panel-formulario">
+
+            <div class="grupo-input">
+                <input id="nombre" placeholder="Nombre">
+                <input id="apellido" placeholder="Apellido">
+
+            </div>
+
+            <div class="grupo-input">
+                <input id="edad" type="number" placeholder="Edad">
+                <input id="curso" placeholder="Curso">
+            </div>
+            
+            <input id="correo" placeholder="Correo">
+
+            <div class="botones">
+                <button id="btnRegistrar">Registrar</button>
+                <button id="btnModo">Modo Oscuro</button>
+            </div>
+
+            <input id="busqueda" placeholder="Buscar estudiante...">
+
+            <p id="mensaje"></p>
+        </section>
+
+        <section id="contenedorEstudiantes"></section>
+
+        <section class="estadisticas">
+
+            <div class="card-estadistica">
+                <h3>Total</h3>
+                <p id="totalEstudiantes">0</p>
+
+            </div>
+
+            <div class="card-estadistica">
+                <h3>Promedio Edad</h3>
+                <p id="promedioEdad">0</p>
+            </div>
+        </section>
+</div>
+<script src="js/jsSRD.js"></script>
+</body>
+</html>

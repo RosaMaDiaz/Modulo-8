@@ -1,0 +1,123 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:Arial;
+    background:#f4f6f9;
+    color:#333;
+    transition:0.3s;
+}
+
+.contenedor{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+    text-align:center;
+}
+
+header h1{color:#2563eb;margin-bottom:10px}
+    /* FORM */
+    .panel-formulario{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.grupo-input{display:flex;gap:10px}
+    input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+.botones{display:flex;gap:10px}
+    button{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#btnRegistrar{background:#2563eb;color:white}
+
+#btnModo{background:#111;color:white}
+
+/* MENSAJE TOAST */
+#mensaje{
+    position:fixed;
+    top:20px;
+    right:20px;
+    padding:10px 15px;
+    border-radius:10px;
+    opacity:0;
+    transform:translateY(-20px);
+    transition:0.3s;
+    color:white;
+}
+
+#mensaje.activo{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* GRID */
+#contenedorEstudiantes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+/* TARJETAS */
+.tarjeta{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    opacity:0;
+    transform:scale(0.9);
+    animation:fade 0.4s forwards;
+}
+
+@keyframes fade{
+    to{opacity:1;transform:scale(1)}
+}
+
+.tarjeta:hover{
+    transform:scale(1.03);
+}
+.codigo{
+    background:#ecfdf5;
+    color:#059669;
+    padding:5px 10px;
+    border-radius:8px;
+    display:inline-block;
+}
+
+.btnEliminar{
+    width:100%;
+    background:#dc2626;
+    color:white;
+    margin-top:10px;
+}
+
+/* ESTADISTICAS */
+.estadisticas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:10px;
+    margin-top:20px;
+}
+
+/* MODO OSCURO */
+.modo-oscuro{
+    background:#0f172a;
+    color:white;
+}
+
+.modo-oscuro .tarjeta,
+.modo-oscuro .panel-formulario{
+    background:#1e293b;
+}
