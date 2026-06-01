@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="css/estilosTodos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>📝 Lista de Tareas</h1>
+
+        <div class="panel">
+
+            <input id="tareaInput" placeholder="Nueva tarea">
+
+            <button id="btnAgregar">Agregar</button>
+
+            <button id="btnModo">Modo Oscuro</button>
+
+        </div>
+
+        <div class="filtros">
+
+            <button onclick="filtrar('todas')">Todas</button>
+
+            <button onclick="filtrar('pendientes')">Pendientes</button>
+
+            <button onclick="filtrar('completadas')">Completadas</button>
+
+        </div>
+
+        <ul id="lista"></ul>
+
+        <div class="estadisticas">
+
+            <p>Total: <span id="total">0</span></p>
+
+            <p>Completadas: <span id="completadas">0</span></p>
+
+            <p>Pendientes: <span id="pendientes">0</span></p>
+
+        </div>
+
+    </div>
+
+    <script src="js/Todo.js"></script>
+
+</body>
+</html>

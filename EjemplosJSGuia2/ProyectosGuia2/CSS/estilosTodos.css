@@ -1,0 +1,88 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial;
+background:#f4f6f9;
+color:#333;
+transition:0.3s;
+}
+
+.contenedor {
+    width: 90%;
+    max-width:600px;
+    margin:40px auto;
+    text-align:center;
+}
+
+h1{margin-bottom:20px}
+    
+.panel{
+    display:flex;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+input{
+    flex:1;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#btnAgregar{background:#2563eb;color:white}
+.filtros{
+    margin:15px 0;
+    display:flex;
+    gap:10px;
+    justify-content:center;
+}
+
+ul{list-style:none;margin-top:20px}
+
+li{
+    background:white;
+    padding:10px;
+    margin:10px 0;
+    border-radius:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+    li.completada{
+        text-decoration:line-through;
+        color:#888;
+}
+
+.botones{
+    display:flex;
+    gap:5px;
+}
+
+    .btnEliminar{
+    background:#dc2626;
+    color:white;
+}
+
+    .btnEditar{
+
+        background:#f59e0b;
+        color:white;
+    }
+
+    /* MODO OSCURO */
+
+    .modo-oscuro{
+        background:#111827;
+        color:white;
+    }
+
+    .modo-oscuro li{
+        background:#1f2937;
+    }
