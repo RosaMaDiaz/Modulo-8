@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Registro de Horas</title>
+<link rel="stylesheet" href="css/horas.css">
+</head>
+<body>
+<div class="contenedor">
+<header>
+<h1>⏱️ Registro de Horas</h1>
+<p>Cálculo de sueldo semanal</p>
+</header>
+<!-- PANEL DE ENTRADA -->
+<section class="panel">
+<div class="grid-horas">
+<input type="number" id="d1" placeholder="Día 1">
+<input type="number" id="d2" placeholder="Día 2">
+<input type="number" id="d3" placeholder="Día 3">
+<input type="number" id="d4" placeholder="Día 4">
+<input type="number" id="d5" placeholder="Día 5">
+<input type="number" id="d6" placeholder="Día 6">
+</div>
+
+<button onclick="calcular()">Calcular Sueldo</button>
+<p id="mensaje"></p>
+</section>
+<!-- RESULTADOS -->
+<section class="resultado">
+<div class="card">
+<h3>Total de Horas</h3>
+<p id="totalHoras">0</p>
+</div>
+<div class="card salario">
+<h3>Sueldo Semanal</h3>
+<p>$<span id="sueldo">0</span></p>
+</div>
+</section>
+<script src="js/horas.js"></script>
+</body>
+</html>
