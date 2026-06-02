@@ -7,18 +7,15 @@ const salida = document.getElementById("salida");
 btnProcesar.addEventListener("click", procesarFormulario);
 
 function procesarFormulario() {
-    // Convertimos el valor de entrada a un número entero
-    let numero = parseInt(input.value.trim());
-
-    // Validaciones: que no esté vacío, que sea un número y que sea positivo
+    
+    let numero = parseInt(input.value.trim());    
     if (isNaN(numero) || numero < 0) {
         salida.innerHTML = `<span class="error">Por favor, ingrese un número entero positivo.</span>`;
         return;
     }
 
-    // Si es válido, calculamos el factorial
+    
     let resultado = calcularFactorial(numero);
-
     // Mostramos el resultado destacado
     salida.innerHTML = `<span class="ok">${resultado}</span>`;
 }
