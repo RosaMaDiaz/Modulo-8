@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Ventas</title>
+    <link rel="stylesheet" href="css/ventas.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <header>
+            <h1>📊 Control de Ventas</h1>
+            <p>Clasificación y análisis de ventas</p>
+        </header>
+
+        <!-- ENTRADA -->
+
+        <section class="panel">
+            <input type="number" id="venta" placeholder="Monto de venta">
+            <button onclick="agregarVenta()">Agregar Venta</button>
+            <p id="mensaje"></p>
+        </section>
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard">
+
+            <div class="card alta">
+                <h3>Ventas Altas</h3>
+                <p>Cantidad: <span id="cantAltas">0</span></p>
+                <p>Total: $<span id="totalAltas">0</span></p>
+            </div>
+
+            <div class="card media">
+                <h3>Ventas Medias</h3>
+                <p>Cantidad: <span id="cantMedias">0</span></p>
+                <p>Total: $<span id="totalMedias">0</span></p>
+            </div>
+
+    
+            <div class="card baja">
+                <h3>Ventas Bajas</h3>
+                <p>Cantidad: <span id="cantBajas">0</span></p>
+                <p>Total: $<span id="totalBajas">0</span></p>
+            </div>
+        </section>
+
+        <!-- RESULTADOS GLOBALES -->
+
+        <section class="resumen">
+            <h3>Total General: $<span id="totalGeneral">0</span></h3>
+            <h3>Promedio: $<span id="promedio">0</span></h3>
+        </section>
+
+    </div>
+
+    <script src="js/ventas.js"></script>
+    
+</body>
+</html>
