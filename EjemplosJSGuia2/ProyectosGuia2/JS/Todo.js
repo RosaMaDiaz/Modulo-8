@@ -75,7 +75,8 @@ function actualizarStats(){
 total.textContent = tareas.length;
 let comp = tareas.filter(t=>t.completada).length;
 completadas.textContent = comp;
-pendientes.textContent = tareas.length - comp;
+pendientes
+.textContent = tareas.length - comp;
 }
 // LOCAL STORAGE
 function guardar(){
