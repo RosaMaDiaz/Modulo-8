@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Ajuste de Fuente</title>
+  <link rel="stylesheet" href="css/estiloClausura.css">
+</head>
+<body>
+    <!--
+    Imagina que estás construyendo una aplicación web (quizás usando un framework como React) y necesitas cambiar el tamaño de fuente 
+    de los elementos de texto de manera dinámica para mejorar la accesibilidad. En lugar de modificar los estilos globales, utilizamos 
+    un closure que crea funciones ajustadoras con un tamaño base fijo
+    -->
+    
+  <header>
+    <h1 id="titulo-principal">Título Principal</h1>
+  </header>
+
+  <main>
+    <div class="botones">
+      <button id="btn-agrandar">Agrandar</button>
+      <button id="btn-reducir">Reducir</button>
+    </div>
+  </main>
+
+  <script src="js/ClausuraJS.js"></script>
+</body>
+</html>
