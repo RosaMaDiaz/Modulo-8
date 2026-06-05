@@ -1,0 +1,55 @@
+body{
+    font-family:'Segoe UI';
+    background:#f4f6f9;
+    text-align:center;
+}
+
+.contenedor{
+    max-width:700px;
+    margin:auto;
+}
+
+/* PANEL */
+.panel{
+    margin:20px;
+}
+
+input{
+    padding:10px;
+}
+
+button{
+    padding:10px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1e40af;
+}
+
+/* GRID 4 COLUMNAS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin:20px;
+}
+
+/* TARJETAS */
+.grid div{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* RESULTADOS */
+.resultado{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    margin-top:20px;
+}

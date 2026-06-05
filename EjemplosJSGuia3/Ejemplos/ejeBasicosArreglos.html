@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos Básicos de los Arreglos</title>
+</head>
+<body>
+    <h1>Métodos Básicos de los Arreglos - Unidad 1</h1>
+    <div id="salida"></div>
+
+    <script>
+        const salida = document.getElementById("salida");
+
+        // Ejemplo de arreglos
+        let subtitulo1 = document.createElement("h3");
+        subtitulo1.textContent = "Ejemplo de arreglos";
+        salida.appendChild(subtitulo1);
+
+        let estudiantes = ["Ana", "Luis", "Carlos"];
+        salida.innerHTML += "Muestra el arreglo de Estudiantes: " + estudiantes + "<br>";
+        salida.innerHTML += "Estudiante en la posición 1 es: " + estudiantes[1] + "<br>";
+        salida.innerHTML += "Cantidad de estudiantes: " + estudiantes.length + "<br><br>";
+
+        // Recorrido con for
+        let subtitulo2 = document.createElement("h3");
+        subtitulo2.textContent = "Recorrido con for";
+        salida.appendChild(subtitulo2);
+
+        for (let i = 0; i < estudiantes.length; i++) {
+            salida.innerHTML += "Estudiante en la posición " + i + " es: " + estudiantes[i] + "<br>";
+        }
+
+        // Recorrido con while
+        let subtitulo3 = document.createElement("h3");
+        subtitulo3.textContent = "Recorrido con while";
+        salida.appendChild(subtitulo3);
+
+        let j = 0;
+        while (j < estudiantes.length) {
+            salida.innerHTML += "Estudiante en la posición " + j + " es: " + estudiantes[j] + "<br>";
+            j++;
+        }
+
+        // Recorrido con for...of
+        let subtitulo4 = document.createElement("h3");
+        subtitulo4.textContent = "Recorrido con for...of";
+        salida.appendChild(subtitulo4);
+
+        for (let estudiante of estudiantes) {
+            salida.innerHTML += "Estudiante: " + estudiante + "<br>";
+        }       
+
+        // Ejemplo con push
+        let subtitulo5 = document.createElement("h3");
+        subtitulo5.textContent = "Ejemplo con Push";
+        salida.appendChild(subtitulo5);
+
+        let colores = ["Rojo", "Azul"];
+        colores.push("Verde");
+        salida.innerHTML += "Colores: " + colores.join(", ");
+
+        // Ejemplo con pop
+        let subtitulo6 = document.createElement("h3");
+        subtitulo6.textContent = "Ejemplo con Pop";
+        salida.appendChild(subtitulo6);
+        
+        colores.pop();
+        salida.innerHTML += "Colores: " + colores.join(", ");
+
+        // Ejemplo con shift
+        let subtitulo7 = document.createElement("h3");
+        subtitulo7.textContent = "Ejemplo con Shift";
+        salida.appendChild(subtitulo7);
+
+        let numeros = [10, 20, 30];
+        numeros.shift();
+        salida.innerHTML += "Números: " + numeros.join(", ");
+
+        // Ejemplo con Unshift
+        let subtitulo8 = document.createElement("h3");
+        subtitulo8.textContent = "Ejemplo con Unshift";
+        salida.appendChild(subtitulo8);
+
+        numeros.unshift(40);
+        salida.innerHTML += "Números: " + numeros.join(", ");
+
+        // Ejemplo con splice()
+        let subtitulo9 = document.createElement("h3");
+        subtitulo9.textContent = "Ejemplo con Splice()";
+        salida.appendChild(subtitulo9);
+
+        let frutas = ["Manzana", "Pera", "Uva"];
+        frutas.splice(1, 1);
+        salida.innerHTML += "Frutas: " + frutas.join(", ");
+
+       // Ejemplo con Matriz Multidimensionales()
+        let subtitulo10 = document.createElement("h3");
+        subtitulo10.textContent = "Ejemplo con Matriz Multidimensionales()";
+        salida.appendChild(subtitulo10);
+
+        let notas = [
+            [80, 90, 85],
+            [75, 88, 92],
+            [95, 87, 90]
+        ];
+
+        for (let ii = 0; ii < notas.length; ii++) {
+            for (let jj = 0; jj < notas[ii].length; jj++) {
+                salida.innerHTML += "Nota en posición [" + ii + "][" + jj + "] es: " + notas[ii][jj] + "<br>";
+            }
+        }
+
+        // Ejemplo con Matriz Multidimensionales introduciendo datos prompt
+        let subtitulo11 = document.createElement("h3");
+        subtitulo11.textContent = "Ejemplo con Matriz Multidimensionales entrando los datos";
+        salida.appendChild(subtitulo11);
+      
+        let filas = parseInt(prompt("¿Cuántos estudiantes?"));
+        let columnas = parseInt(prompt("¿Cuántas notas por estudiante?"));
+
+        let notas1 = [];
+
+        for (let i = 0; i < filas; i++) {
+            notas1[i] = [];
+            for (let j = 0; j < columnas; j++) {
+                notas1[i][j] = parseInt(prompt("Introduce la nota del estudiante " + i + " en la posición " + j));
+            }
+        }
+
+        // Mostrar resultados
+        for (let i = 0; i < notas1.length; i++) {
+            for (let j = 0; j < notas1[i].length; j++) {
+                salida.innerHTML += "Nota del estudiante " + i + " en posición [" + i + "][" + j + "] es: " + notas1[i][j] + "<br>";
+            }
+        }
+    </script>
+
+</body>
+</html>

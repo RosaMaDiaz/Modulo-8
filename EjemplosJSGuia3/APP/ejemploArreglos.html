@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Datos</title>
+    <!-- Enlace correcto al CSS -->
+    <link rel="stylesheet" href="../css/arreglo.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <!-- ENCABEZADO -->
+        <header>
+            <h1>📊 Análisis de Datos</h1>
+            <p>Gestión de arreglo con 12 valores</p>
+        </header>
+
+        <!-- PANEL DE ENTRADA -->
+        <section class="panel">
+            <input type="number" id="numero" placeholder="Ingrese número">
+            <button onclick="agregar()">Agregar</button>
+        </section>
+
+        <!-- VISUALIZACIÓN EN GRID -->
+        <section>
+            <h2>Valores registrados</h2>
+            <div id="gridDatos" class="grid"></div>
+        </section>
+
+        <!-- PROCESO -->
+
+        <section class="acciones">
+            <button onclick="procesar()">Procesar Datos</button>
+        </section>
+
+        <!-- RESULTADOS -->
+        <section class="resultado">
+            <h3>Resultados</h3>
+            <p>Mayor: <span id="mayor">-</span></p>
+            <p>Promedio: <span id="promedio">-</span></p>
+            <p>Mayores al promedio:</p>
+            <p id="mayores">-</p>
+        </section>
+    </div>
+
+    <!-- Enlace correcto al JS -->
+
+    <script src="../js/arreglo.js"></script>
+</body>
+</html>
