@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Calificaciones con Matrices</title>
+    <link rel="stylesheet" href="/css/matriz.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <h1>Reporte General de Calificaciones</h1>
+
+        <div class="formulario">
+            <input type="text" id="asignatura" placeholder="Asignatura">
+            <input type="number" id="cal1" placeholder="Calificación 1">
+            <input type="number" id="cal2" placeholder="Calificación 2">
+            <input type="number" id="cal3" placeholder="Calificación 3">
+            <input type="number" id="cal4" placeholder="Calificación 4">
+
+            <button onclick="agregarAsignatura()">
+                Agregar Asignatura
+            </button>
+        </div>
+
+        <div id="mensaje"></div>
+
+        <div id="reporte"></div>
+    </div>
+
+    <!--Resultados-->
+    <div class="contenedor-resultados">
+        <div class="grid-resultados">
+            <div class="tarjeta-resultado de-mayor">
+                <h3>Mayor Promedio</h3>
+                <p id="mayor">-</p>
+            </div>
+            
+            <div class="tarjeta-resultado de-menor">
+                <h3>Menor Promedio</h3>
+                <p id="menor">-</p>
+            </div>
+            
+            <div class="tarjeta-resultado de-general">
+                <h3>Promedio General</h3>
+                <p id="promedioGeneral">-</p>
+            </div>
+        </div>
+
+        <div class="zona-reinicio">
+            <button onclick="reiniciarReporte()" class="btn-reiniciar">
+                Reiniciar Reporte
+            </button>
+        </div>
+    </div>
+
+
+    <script src="/js/matriz.js"></script>
+    
+</body>
+</html>
