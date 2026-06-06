@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Vehículos</title>
+    <link rel="stylesheet" href="/css/auto.css">
+</head>
+
+<body>
+
+
+    <div class="contenedor">
+        <h1>🚗 Sistema de Gestión de Vehículos</h1>
+
+        <div class="tarjeta">
+            <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
+            alt="Vehículo" class="vehiculo">
+            <h2>Información del Vehículo</h2>
+
+            <table>
+                <tbody id="tblVehiculo">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="panel">
+            <h2>Control del Vehículo</h2>
+            <input type="text" id="txtChasis" placeholder="Digite el número de chasis">
+
+            <div class="botones">
+                <button id="btnEncender">
+                    Encender
+                </button>
+
+                <button id="btnApagar">
+                    Apagar
+                </button>
+                
+            </div>
+
+            <div id="estado" class="estado apagado">
+                OFF
+            </div>
+
+            <div id="mensaje"></div>
+        </div>
+    </div>
+
+<script src="/js/auto.js"></script>
+</body>
+</html>

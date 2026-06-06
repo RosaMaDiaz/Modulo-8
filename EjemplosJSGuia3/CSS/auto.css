@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.contenedor{
+    width:100%;
+    max-width:900px;
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+}
+
+.tarjeta,
+.panel{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.vehiculo{
+    width:120px;
+    display:block;
+    margin:auto;
+    margin-bottom:15px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:15px;
+    color:#1e293b;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td{
+    border-bottom:1px solid #ddd;
+    padding:10px;
+}
+
+td:first-child{
+    font-weight:bold;
+    width:40%;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-bottom:15px;
+font-size:16px;
+}
+.botones{
+    display:flex;
+    gap:10px;
+}
+
+button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+#btnEncender{
+    background:#22c55e;
+    color:white;
+}
+
+#btnEncender:hover{
+    background:#16a34a;
+}
+
+#btnApagar{
+    background:#ef4444;
+    color:white;
+}
+
+#btnApagar:hover{
+    background:#dc2626;
+}
+
+.estado{
+    margin-top:20px;
+    text-align:center;
+    padding:15px;
+    font-size:24px;
+    font-weight:bold;
+    border-radius:10px;
+}
+
+.encendido{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.apagado{
+    background:#fee2e2;
+    color:#b91c1c;
+}
+
+#mensaje{
+    margin-top:15px;
+    text-align:center;
+    font-weight:bold;
+}
