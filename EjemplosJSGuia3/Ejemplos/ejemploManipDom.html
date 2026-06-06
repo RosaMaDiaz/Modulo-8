@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulacion del DOM</title>
+</head>
+<body>
+    <h2 id="titulo">Curso de JavaScript</h2>
+
+    <button onclick="cambiarTitulo()">
+        Cambiar Título
+    </button>
+
+    <script>
+        function cambiarTitulo(){
+            // Obtenemos el elemento por su ID y cambiamos su contenido
+            document.getElementById("titulo").innerHTML = 
+            "DOM Modificado correctamente";
+        }
+    </script>
+    
+</body>
+</html>
