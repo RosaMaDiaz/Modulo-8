@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación Dinámica</title>
+</head>
+<body>
+    <h2>Bienvenido al curso</h2>
+
+    <p id="mensaje"></p>
+
+    <button onclick="cambiarTexto()">
+        Cambiar Mensaje
+    </button>
+
+    <script>
+        function cambiarTexto(){
+            // Ahora este elemento sí existe y el texto cambiará correctamente
+            document.getElementById("mensaje").innerHTML = 
+            "Has hecho clic en el botón";
+        }
+    </script>
+    
+</body>
+</html>
