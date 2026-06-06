@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tarjeta {
+            border: 1px solid gray;
+            padding: 15px;
+        }
+        .destacada {
+            background-color: yellow;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="tarjeta" class="tarjeta">
+        Informacion importante
+    </div>
+
+    <button onclick="destacar()">
+        Destacar
+    </button>
+
+    <script>
+        function destacar() {
+            document.getElementById('tarjeta')
+            .classList.add('destacada');
+        }
+    </script>
+
+</body>
+</html>

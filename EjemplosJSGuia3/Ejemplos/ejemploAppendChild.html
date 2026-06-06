@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear elementos</title>
+</head>
+<body>
+
+    <button onclick="crearParrafo()">
+        Crear Párrafo
+    </button>
+
+    <script>
+        function crearParrafo() {
+           let parrafo =
+            document.createElement('p');
+
+            parrafo.textContent =
+            "Este párrafo fue generado por JavaScript.";
+            document.body.appendChild(parrafo);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear  con Div</title>
+</head>
+<body>
+
+    <button onclick="crearDiv()">
+        Crear Div
+    </button>
+
+    <script>
+        function crearDiv() {
+           let div =
+            document.createElement('div');
+
+            div.textContent =
+            "Contenedor creado dinamicamente.";
+            document.body.appendChild(div);
+        }
+    </script>
+    
+</body>
+</html>
