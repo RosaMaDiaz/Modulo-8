@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Datos Completo de un Objeto en la Página</title>
+</head>
+<body>
+
+    <h1>Mostrar Datos Completo de un Objeto en la Página</h1>
+
+    <h2 id = "nombre"></h2>
+    <p id="edad"></p>
+    <p id="ciudad"></p>
+
+    <script>
+        let persona = {
+            nombre: "María",
+            edad: 22,
+            ciudad: "Santo Domingo"
+        };
+        document.getElementById("nombre")
+            .textContent = persona.nombre;
+        document.getElementById("edad")
+            .textContent = "Edad: " + persona.edad;
+        document.getElementById("ciudad")
+            .textContent = "Ciudad: " + persona.ciudad;
+    </script>
+    
+</body>
+</html>
