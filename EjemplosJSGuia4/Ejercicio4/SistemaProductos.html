@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Registro de Productos</title>
+    <link rel="stylesheet" href="CSS/productos.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="main-header">
+            <h1>Sistema de Registro de Productos</h1>
+            <p>Ejercicio Integrador - Tablas Dinámicas con JavaScript</p>
+        </header>
+
+        <section class="card">
+            <h3>Acciones del Sistema</h3>
+            <div class="button-group">
+                <button id="btnMostrar" class="btn btn-blue">Mostrar Productos</button>
+                <button id="btnActualizar" class="btn btn-green">Actualizar Tabla</button>
+                <button id="btnLimpiar" class="btn btn-red">Limpiar Tabla</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>Listado de Productos</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Existencia</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaProductos">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>Resumen</h3>
+            <p>Total de productos: <span id="totalProductos" class="text-blue">0</span></p>
+            <p>Valor total del inventario: <span id="valorInventario" class="text-blue">RD$ 0.00</span></p>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 - Desarrollo Web | Diseñado para Sistema de Registro de Productos</p>
+    </footer>
+
+    <script src="JS/productos.js"></script>
+</body>
+</html>
