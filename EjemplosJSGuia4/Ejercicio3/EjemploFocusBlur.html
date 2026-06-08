@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Datos Personales</title>
+    <link rel="stylesheet" href="css/focusBlur.css">
+</head>
+<body>
+    
+    <div class="container">
+    <header>
+        <h1>Captura de Datos Personales</h1>
+        <p>
+            Utilice el formulario y observe cómo se muestran
+            mensajes de ayuda al interactuar con cada campo.
+        </p>
+    </header>
+
+    <main>
+        <section class="panel-ayuda">
+            <h2>Ayuda Contextual</h2>
+            <div id="textoAyuda">
+                Seleccione un campo del formulario para visualizar instrucciones.
+            </div>
+        </section>
+
+        <section class="panel-formulario">
+        <form id="frmDatos">
+            <div class="grupo">
+                <label for="txtNombre">
+                    Nombre
+                </label>
+                
+                <input type="text" id="txtNombre" placeholder="Ingrese su
+                nombre">    
+            </div>
+
+            <div class="grupo">
+                <label for="txtApellido">
+                    Apellido
+                </label>
+                <input type="text" id="txtApellido" placeholder="Ingrese su apellido">
+            </div>
+
+            <div class="grupo">
+                <label for="txtCorreo">
+                    Correo Electrónico
+                </label>
+                <input type="email" id="txtCorreo" placeholder="ejemplo@correo.com">
+            </div>
+
+            <div class="grupo">
+                <label for="txtTelefono">
+                    Teléfono
+                </label>
+                <input type="tel" id="txtTelefono" placeholder="809-123-4567">
+            </div>
+
+            <div class="grupo">
+                <label for="txtDescripcion">
+                    Descripción Personal
+                </label>
+                <textarea id="txtDescripcion" rows="4" placeholder="Escriba una
+                    breve descripción">
+                </textarea>
+            </div>
+
+            <div class="grupo">
+                <label for="selProfesion">
+                    Profesión
+                </label>
+                <select id="selProfesion">
+                    <option value="">
+                        Seleccione una profesión
+                    </option>
+
+                    <option value="dev">
+                        Desarrollador Web
+                    </option>
+
+                    <option value="prog">
+                        Programador
+                    </option>
+
+                    <option value="db">
+                        Administrador de Bases de Datos
+                    </option>
+
+                    <option value="red">
+                        Técnico en Redes
+                    </option>
+
+
+                    <option value="doc">
+                        Docente
+                    </option>
+
+                    <option value="est">
+                        Estudiante
+                    </option>
+
+                </select>
+            </div>
+
+            <div class="grupo">
+                <label for="selPais">
+                    País
+                </label>
+
+                <select id="selPais">
+                    <option value="">
+                        Seleccione un país
+                    </option>
+
+                    <option value="do">
+                        República Dominicana
+                    </option>
+
+                    <option value="pr">
+                        Puerto Rico
+                    </option>
+
+                    <option value="co">
+                        Colombia
+                    </option>
+
+                    <option value="mx">
+                        México
+                    </option>
+
+                    <option value="ar">
+                        Argentina
+                    </option>
+                    <option value="es">
+                        España
+                    </option>
+                </select>
+            </div>
+
+            <div class="botones">
+                <button type="reset">
+                    Cancelar
+                </button>
+
+                <button type="submit">
+                    Registrar
+                </button>
+
+            </div>
+
+        </form>
+
+        </section>
+    </main>
+</div>
+
+<script src="js/focusBlur.js"></script>
+
+</body>
+</html>

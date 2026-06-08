@@ -1,0 +1,144 @@
+/* ==========================
+Estilos Generales
+========================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #333;
+    padding: 20px;
+}
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+/* ==========================
+Encabezado
+========================== */
+header{
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+header h1{
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+header p{
+    color: #555;
+}
+/* ==========================
+Paneles
+========================== */
+.panel-ayuda,
+.panel-formulario{
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.panel-ayuda h2{
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+/* ==========================
+Mensaje de Ayuda
+========================== */
+#textoAyuda{
+    background-color: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 70px;
+    color: #1e3a8a;
+}
+/* ==========================
+Formulario
+========================== */
+.grupo{
+    margin-bottom: 18px;
+}
+.grupo label{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #334155;
+}
+
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Estado Focus */
+    input:focus,
+    select:focus,
+    textarea:focus{
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 6px rgba(37,99,235,0.25);
+}
+/* Área de texto */
+textarea{
+    resize: vertical;
+    min-height: 120px;
+}
+/* ==========================
+Botones
+========================== */
+.botones{
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+.botones button{
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+/* Botón Cancelar */
+.botones button[type="reset"]{
+    background-color: #e2e8f0;
+    color: #334155;
+}
+.botones button[type="reset"]:hover{
+    background-color: #cbd5e1;
+}
+/* Botón Registrar */
+.botones button[type="submit"]{
+    background-color: #2563eb;
+    color: white;
+}
+.botones button[type="submit"]:hover{
+    background-color: #1d4ed8;
+}
+/* ==========================
+Diseño Adaptable
+========================== */
+@media (max-width: 768px){
+body{
+    padding: 10px;
+}
+.botones{
+    flex-direction: column;
+}
+}
