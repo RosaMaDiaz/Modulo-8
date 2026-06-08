@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios y Eventos</title>
+    <link rel="stylesheet" href="CSS/controlForms.css">
+</head>
+<body>
+    <header>
+        <h1>Formularios y Eventos en JavaScript</h1>
+        <p>
+            Ejemplo integrador de controles de formulario,
+            eventos y mensajes dinámicos.
+
+        </p>
+    </header>
+
+    <main>
+        <form id="frmEjemplo">
+            <fieldset>
+                <legend>Información del Participante</legend>
+                <div class="grupo">
+                    <label for="txtNombre">
+                        Nombre:
+                    </label>
+
+                    <input type="text" id="txtNombre" placeholder="Ingrese su nombre">
+                </div>
+
+                <div class="grupo">
+                    <label for="txtCorreo">
+                        Correo Electrónico:
+                    </label>
+                    <input type="email" id="txtCorreo" placeholder="ejemplo@correo.com">
+                </div>
+
+                <div class="grupo">
+                    <label for="selCurso">
+                        Curso de Interés:
+                    </label>
+                    <select id="selCurso">
+                        <option value="">
+                            Seleccione una opción
+                        </option>
+
+                        <option value="JavaScript">
+                            JavaScript
+                        </option>
+
+                        <option value="HTML y CSS">
+                            HTML y CSS
+                        </option>
+
+                        <option value="Bases de Datos">
+                            Bases de Datos
+                        </option>
+
+                    </select>
+
+                </div>
+                
+                <div class="grupo">
+
+                    <p>Modalidad de Estudio:</p>
+                    <input type="radio" name="modalidad" id="presencial"
+                        value="Presencial">
+                        <label for="presencial">
+                            Presencial
+                    </label>
+                    <br>
+                    <input type="radio" name="modalidad" id="virtual" value="Virtual">
+                    <label for="virtual">
+                        Virtual
+                    </label>
+
+                </div>
+
+                <div class="grupo">
+                    <p>Seleccione sus intereses:</p>
+                    <input type="checkbox" id="chkProgramacion">
+                    <label for="chkProgramacion">
+                        Programación
+                    </label>
+                    <br>
+                    
+                    <input type="checkbox" id="chkWeb">
+                    <label for="chkWeb">
+                        Desarrollo Web
+                    </label>
+                    <br>
+
+                    <input type="checkbox" id="chkBD">
+                    <label for="chkBD">
+                        Bases de Datos
+                    </label>
+                </div>
+
+                <div class="grupo">
+                    <button type="button" id="btnMostrar">
+                        Mostrar Información
+                    </button>
+
+                    <button type="reset">
+                        Limpiar
+
+                    </button>
+
+                </div>
+
+            </fieldset>
+        </form>    
+
+        <section id="mensajes">
+            <h2>Mensajes del Sistema</h2>
+                <div id="resultado">
+                    Realice una acción sobre el formulario.
+                </div>
+        </section>
+    </main>
+
+    <script src="JS/controlForms.js"></script>
+
+    
+</body>
+</html>
