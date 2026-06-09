@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Sistema de Gestión de Empleados</title>
+
+    <link rel="stylesheet" href="CSS/empleado.css">
+
+    <script src="js/empleado.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema de Gestión de Empleados</h1>
+        <p>Operaciones CRUD con JavaScript</p>
+    </header>
+
+    <main>
+
+        <section class="contenedor-formulario">
+            <h2>Registro de Empleados</h2>
+
+            <form id="frmEmpleado">
+
+
+                <div class="grupo">
+                    <label for="txtCodigo">Código</label>
+                    <input type="text" id="txtCodigo" placeholder="E001">
+                </div>
+
+                <div class="grupo">
+                    <label for="txtNombre">Nombre</label>
+                        <input type="text" id="txtNombre" placeholder="Nombre del
+                            empleado">
+                </div>
+
+
+                <div class="grupo">
+                    <label for="txtCargo">Cargo</label>
+                    <input type="text" id="txtCargo" placeholder="Cargo">
+                </div>
+
+                <div class="grupo">
+                    <label for="selDepartamento">Departamento</label>
+
+                    <select id="selDepartamento">
+                        <option value="">Seleccione...</option>
+                        <option>Tecnología</option>
+                        <option>Recursos Humanos</option>
+                        <option>Contabilidad</option>
+                        <option>Ventas</option>
+                        <option>Administración</option>
+
+                    </select>
+
+                </div>
+
+                <div class="grupo">
+                    <label for="txtSalario">Salario</label>
+                    <input type="number" id="txtSalario" placeholder="0">
+                </div>
+
+                <div class="botones">
+                    <button type="button" id="btnGuardar">
+                        Guardar
+                    </button>
+
+                    <button type="button" id="btnActualizar">
+                        Actualizar
+                    </button>
+
+                    <button type="reset">
+                        Limpiar
+
+                    </button>
+
+                </div>
+
+            </form>
+
+            <p id="mensaje"></p>
+        </section>
+
+        <section class="contenedor-tabla">
+            <h2>Listado de Empleados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Cargo</th>
+                        <th>Departamento</th>
+                        <th>Salario</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaEmpleados">
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+</body>
+</html>

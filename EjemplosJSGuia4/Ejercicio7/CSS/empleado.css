@@ -1,0 +1,126 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f6f9;
+padding:20px;
+color:#333;
+}
+header{
+background:#2563eb;
+color:white;
+text-align:center;
+padding:25px;
+border-radius:10px;
+margin-bottom:20px;
+}
+header p{
+margin-top:10px;
+}
+main{
+max-width:1100px;
+margin:auto;
+}
+.contenedor-formulario,
+.contenedor-tabla{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+h2{
+margin-bottom:15px;
+color:#2563eb;
+}
+.grupo{
+
+margin-bottom:15px;
+}
+.grupo label{
+display:block;
+margin-bottom:5px;
+font-weight:bold;
+}
+.grupo input,
+.grupo select{
+width:100%;
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+.botones{
+margin-top:20px;
+}
+.botones button{
+padding:10px 18px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+color:white;
+margin-right:10px;
+}
+#btnGuardar{
+background:#16a34a;
+}
+#btnActualizar{
+background:#f59e0b;
+}
+button[type="reset"]{
+background:#dc2626;
+}
+#mensaje{
+margin-top:15px;
+font-weight:bold;
+}
+table{
+width:100%;
+border-collapse:collapse;
+}
+thead{
+background:#2563eb;
+color:white;
+}
+th,
+td{
+padding:12px;
+border:1px solid #ddd;
+text-align:center;
+
+}
+tbody tr:nth-child(even){
+background:#f8fafc;
+}
+tbody tr:hover{
+background:#e0f2fe;
+}
+.btnEditar{
+background:#f59e0b;
+color:white;
+border:none;
+padding:6px 10px;
+border-radius:4px;
+cursor:pointer;
+margin-right:5px;
+}
+.btnEliminar{
+background:#dc2626;
+color:white;
+border:none;
+padding:6px 10px;
+border-radius:4px;
+cursor:pointer;
+}
+@media(max-width:768px){
+table{
+font-size:0.9rem;
+}
+.botones button{
+display:block;
+width:100%;
+margin-bottom:10px;
+}
+}
