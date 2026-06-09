@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pedido de Pizza</title>
+
+    <link rel="stylesheet" href="CSS/pizza.css">
+</head>
+
+<body>
+    
+    <header>
+        <img src="img/pizza.jpg" alt="Pizza" class="logoPizza">
+        <h1>Pizzería La Web</h1>
+        <p>Sistema de Pedido y Facturación</p>
+    </header>
+
+    <main>
+
+        <section class="formulario">
+            <h2>Datos del Cliente</h2>
+
+            <form id="frmPizza">
+                <div class="grupo">
+                    <label for="txtCliente">Nombre del Cliente:</label>
+                    <input type="text" id="txtCliente">
+                </div>
+
+                <h2>Tamaño de Pizza</h2>
+
+                <div class="grupo">
+                    <label>
+                        <input type="radio" name="tamano" value="7.50" checked>
+                        Pequeña ($7.50)
+                    </label>
+
+                    <label>
+                        <input type="radio" name="tamano" value="12.00">
+                            Mediana ($12.00)
+                    </label>
+
+                    <label>
+                        <input type="radio" name="tamano" value="16.00">
+                        Gigante ($16.00)
+                    </label>
+
+                </div>
+
+                <h2>Ingredientes</h2>
+
+                <div class="grupo">
+                    <label>
+                        <input type="checkbox" class="ingrediente" value="1.25">
+                        Hongos ($1.25)
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="ingrediente" value="0.75">
+                        Cebolla ($0.75)
+
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="ingrediente" value="0.50">
+                        Aceitunas ($0.50)
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="ingrediente" value="1.50">
+                        Jamón ($1.50)
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox" class="ingrediente" value="1.50">
+                        Pepperoni ($1.50)
+                    </label>
+                </div>
+
+                <div class="grupo">
+                    <label for="txtPago">
+                        Pagado con:
+                    </label>
+
+                    <input type="number" id="txtPago" min="0" step="0.01">
+
+                </div>
+
+                <div class="botones">
+
+                    <button type="button" id="btnRecibo">
+                        Generar Recibo
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="recibo">
+            <h2>Recibo</h2>
+            <div id="resultado">
+                <p>
+                    El recibo aparecerá aquí.
+                </p>
+            </div>
+        </section>
+
+        <div class="grupo totalPedido">
+            <label>
+                Monto a Pagar:
+
+                <span id="lblTotal">$7.50</span>
+            </label>
+
+        </div>
+
+    </main>
+
+    <script src="JS/pizza.js"></script>
+
+</body>
+</html>

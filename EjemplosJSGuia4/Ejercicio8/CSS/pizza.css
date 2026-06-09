@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    color:#333;
+}
+header{
+    text-align:center;
+    background:#d62828;
+    color:white;
+    padding:20px;
+}
+.logoPizza{
+    width:120px;
+    margin-bottom:10px;
+}
+header h1{
+    margin-bottom:10px;
+}
+main{
+    max-width:1200px;
+    margin:20px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    padding:20px;
+}
+.formulario,
+.recibo{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+h2{
+    margin-bottom:15px;
+    color:#d62828;
+}
+.grupo{
+    margin-bottom:20px;
+}
+.grupo label{
+    display:block;
+    margin-bottom:8px;
+}
+input[type="text"],
+
+input[type="number"]{
+    width:100%;
+    padding:10px;
+}
+.botones{
+    display:flex;
+    gap:10px;
+}
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    background:#d62828;
+    color:white;
+    cursor:pointer;
+}
+button:hover{
+    background:#b71c1c;
+}
+#resultado{
+    background:#f8f9fa;
+    border:1px solid #ddd;
+    padding:20px;
+    min-height:300px;
+}
+@media(max-width:768px){
+    main{
+        grid-template-columns:1fr;
+    }
+}
+.totalPedido{
+    margin-top:20px;
+    padding:15px;
+    background:#fff3cd;
+    border:1px solid #ffe69c;
+    border-radius:5px;
+    text-align:center;
+}
+#lblTotal{
+    font-size:1.5rem;
+    font-weight:bold;
+    color:#d62828;
+}
+#resultado{
+    margin-top:20px;
+    padding:20px;
+    background:#f8f8f8;
+    border:1px solid #ccc;
+    border-radius:8px;
+    min-height:300px;
+}
+.linea-recibo{
+    margin:6px 0;
+
+    line-height:1.4;
+}
+.total-recibo{
+    font-size:1.1rem;
+    font-weight:bold;
+}
+.devuelta{
+    color:green;
+    font-weight:bold;
+}
+.mensaje-final{
+    text-align:center;
+    font-style:italic;
+}
