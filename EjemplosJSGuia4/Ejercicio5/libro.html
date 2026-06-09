@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Sistema de Registro de Libros</title>
+
+    <link rel="stylesheet" href="css/libro.css">
+
+    <script src="js/libro.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema de Registro de Libros</h1>
+        <p>Formulario, Objetos y Tablas Dinámicas con JavaScript</p>
+    </header>
+
+    <main>
+
+        <section class="contenedor-formulario">
+            <h2>Datos del Libro</h2>
+
+            <form id="frmLibro">
+                <div class="grupo">
+                    <label for="txtAutor">Autor</label>
+                    <input type="text" id="txtAutor">
+                </div>
+
+                <div class="grupo">
+                    <label for="txtTitulo">Título</label>
+                    <input type="text" id="txtTitulo">
+                </div>
+
+                <div class="grupo">
+                    <label for="selEditorial">Editorial</label>
+                        <select id="selEditorial">
+                            <option value="McGraw-Hill">McGraw-Hill</option>
+                            <option value="Pearson">Pearson</option>
+                            <option value="Alfaomega">Alfaomega</option>
+                            <option value="Anaya">Anaya</option>
+                        </select>
+                </div>
+
+
+                <div class="grupo">
+                    <label for="selEdicion">Edición</label>
+                    <select id="selEdicion">
+                        <option value="1ra">1ra</option>
+                        <option value="2da">2da</option>
+                        <option value="3ra">3ra</option>
+                        <option value="4ta">4ta</option>
+                        <option value="5ta">5ta</option>
+                    </select>
+                </div>
+
+                <div class="grupo">
+                    <label for="txtPais">País</label>
+                    <input type="text" id="txtPais">
+                </div>
+
+                <div class="botones">
+                    <button type="button" id="btnRegistrar">
+                        Registrar Libro
+                    </button>
+
+                    <button type="reset">
+                        Limpiar
+                    </button>
+                </div>
+            </form>
+
+            <p id="mensaje"></p>
+            
+        </section>
+
+        <section class="contenedor-tabla">
+            <h2>Libros Registrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Autor</th>
+                        <th>Título</th>
+                        <th>Editorial</th>
+                        <th>Edición</th>
+                        <th>País</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaLibros">
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
