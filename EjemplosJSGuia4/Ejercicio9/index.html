@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Anuncios</title>
+
+    <link rel="stylesheet" href="CSS/anuncios.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema de Gestión de Anuncios</h1>
+        <p>Manipulación dinámica del DOM mediante JavaScript</p>
+    </header>
+
+    <main>
+        <!-- Formulario de gestión -->
+
+
+        <section class="panelFormulario">
+            <h2>Administración de Anuncios</h2>
+            <form id="frmAnuncios">
+
+                <div class="grupo">
+                    <label for="txtMensaje">
+                        Mensaje del anuncio
+                    </label>
+
+                    <textarea
+                        id="txtMensaje"
+                        rows="5"
+                        placeholder="Escriba aquí el anuncio">
+                    </textarea>
+
+                </div>
+
+                <div class="grupo">
+                    <label>
+                        Acción a realizar
+
+                    </label>
+
+                <div class="opciones">
+                    <label>
+                        <input type="radio"
+                            name="accion"
+                            value="agregar">
+                            Agregar
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                            name="accion"
+                            value="insertar">
+                            Insertar antes
+
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                                name="accion"
+                                value="reemplazar">
+                                Reemplazar
+                            </label>
+
+                            <label>
+                                <input type="radio"
+                                    name="accion"
+                                    value="eliminar">
+                                    Eliminar
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <div class="grupo">
+    
+                        <label for="cmbAnuncios">
+                            Seleccione un anuncio
+                        </label>
+
+                        <select id="cmbAnuncios">
+
+                            <option value="">
+                                Seleccione...
+
+                            </option>
+                        </select>
+                    </div>              
+
+                    <button type="submit">
+                        Ejecutar Acción
+                    </button>
+
+                </form>
+
+        </section>
+
+            <!-- Área de anuncios -->
+
+            <section class="panelContenido">
+            <h2>Publicaciones</h2>
+                <div id="contenedorAnuncios">
+
+                    <!-- Los anuncios serán creados dinámicamente -->
+                </div>
+
+            </section>
+
+    </main>
+
+        <script src="JS/anuncios.js"></script>
+
+</body>
+</html>

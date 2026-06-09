@@ -1,0 +1,98 @@
+/* Reinicio básico */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+/* Estilos generales */
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f6f9;
+color:#333;
+padding:20px;
+}
+header{
+background:#2563eb;
+text-align:center;
+padding:25px;
+border-radius:10px;
+margin-bottom:20px;
+}
+header h1{
+color:white;
+}
+header p{
+color:#c9c6c6;
+}
+/* Diseño principal */
+main{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+.panelFormulario{
+background:#fff;
+padding:20px;
+border-radius:8px;
+
+}
+.panelContenido{
+background:#fff;
+padding:20px;
+border-radius:8px;
+}
+/* Formulario */
+form{
+display:flex;
+flex-direction:column;
+}
+.grupo{
+margin-bottom:15px;
+}
+.grupo label{
+display:block;
+margin-bottom:5px;
+}
+textarea{
+width:100%;
+padding:10px;
+}
+select{
+width:100%;
+padding:8px;
+}
+button{
+padding:10px;
+background:#2563eb;
+color:white;
+border:none;
+cursor:pointer;
+}
+button:hover{
+background:#1d4ed8;
+}
+/* Área de publicaciones */
+#contenedorAnuncios{
+min-height:300px;
+}
+/* Anuncios creados */
+.anuncio{
+padding:10px;
+margin-bottom:10px;
+border:1px solid #ddd;
+}
+/* Anuncio seleccionado */
+.seleccionado{
+background:#fef3c7;
+}
+
+/* Mensajes */
+.mensaje{
+color:#dc2626;
+}
+/* Responsive */
+@media(max-width:768px){
+main{
+grid-template-columns:1fr;
+}
+}
