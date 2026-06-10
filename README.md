@@ -1,2 +1,2 @@
 # Modulo-8
-Este módulo trata sobre ejerciciso con JavaScript
+Este módulo trata sobre ejercicios con JavaScript
